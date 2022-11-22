@@ -1,8 +1,8 @@
 
 class Star {
   constructor() {
-    this.X = random(800)
-    this.Y = random(800)
+    this.X = random(windowWidth)
+    this.Y = random(windowHeight)
     this.colorBuilder()
     this.w = this.w
     this.h = this.h
@@ -31,8 +31,8 @@ class Star {
   }
   update () {
     this.Y += this.speed
-    if (this.Y > 800) {
-      this.Y -= 800
+    if (this.Y > windowHeight) {
+      this.Y -= windowHeight
     }
 
 
@@ -42,7 +42,7 @@ class Star {
 let starStorage = []
 function setup () {
 
-  createCanvas(800, 800)
+  createCanvas(windowWidth, windowHeight)
   background(0)
 
   for (let i = 0; i < 200; i++) {
